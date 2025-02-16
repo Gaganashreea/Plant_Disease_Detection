@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Plant Disease Detection</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🌿 Plant Disease Detection</h1>
+        <h4>Upload Plant Leaf Images</h4>
+
+        <!-- 📂 File Upload -->
+        <input type="file" id="upload" accept="image/*">
+
+        <button onclick="detectDisease()">Detect Disease</button>
+        <button onclick="clearHistory()">🗑 Clear History</button>
+
+        <!-- 🎙 Voice Settings -->
+        <div>
+            <label>🔊 Enable Voice Output:</label>
+            <input type="checkbox" id="voiceToggle" checked>
+            <label>🎤 Choose Voice:</label>
+            <select id="voiceSelect"></select>
+
+        </div>
+
+        <div id="loading">🔄 Analyzing...</div>
+        <div id="result"></div>
+        <img id="preview" src="" alt="Uploaded Image">
+
+        <h2>📜 Detection History</h2>
+        <div id="history"></div>
+
+        <button onclick="toggleDarkMode()" id="toggleMode">🌙 Toggle Dark Mode</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

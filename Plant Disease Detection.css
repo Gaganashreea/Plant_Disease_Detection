@@ -1,0 +1,103 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #e0f7fa, #a5d6a7);
+    color: #333;
+    padding: 20px;
+    transition: background 0.5s, color 0.5s;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s;
+    width: 100%;
+    /* Make it fluid */
+}
+
+/* File input style */
+input[type="file"] {
+    width: 96%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px dashed #4CAF50;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Button styles */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 16px;
+
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* 🌙 Dark Mode */
+.dark-mode {
+    background: linear-gradient(135deg, #263238, #37474f);
+    color: white;
+}
+
+.container.dark-mode {
+    background: #424242;
+}
+
+button.dark-mode {
+    background-color: #1b5e20;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+
+    /* Make image responsive */
+    #preview {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Adjust file input and buttons to better fit smaller screens */
+    input[type="file"] {
+        width: 100%;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
